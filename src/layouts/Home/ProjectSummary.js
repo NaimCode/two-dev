@@ -61,7 +61,7 @@ export const ProjectSummary = ({
           notchWidth="64px"
           notchHeight="8px"
           collapsed={!visible}
-          collapseDelay={1000}
+          collapseDelay={100}
         />
         <span className={styles.indexNumber} data-visible={visible}>
           {indexText}
@@ -79,11 +79,11 @@ export const ProjectSummary = ({
       <Text className={styles.description} data-visible={visible} as="p">
         {description}
       </Text>
-      {/* <div className={styles.button} data-visible={visible}>
+      <div className={styles.button} data-visible={visible}>
         <Button iconHoverShift href={buttonLink} iconEnd="arrowRight">
           {buttonText}
         </Button>
-      </div> */}
+      </div>
     </div>
   );
 

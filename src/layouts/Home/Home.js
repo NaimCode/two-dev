@@ -3,7 +3,9 @@ import pico1 from 'assets/pico/1.png';
 import eatout1 from 'assets/eatout/1.png';
 import eatout2 from 'assets/eatout/2.png';
 import eternumGif from 'assets/eternum/home.gif';
-// import aospresse from 'assets/carnet/home.png';
+import aospresse from 'assets/aospresse/1.png';
+import bousta1 from 'assets/bousta/1.jpg';
+import bousta2 from 'assets/bousta/2.jpg';
 import { Footer } from 'components/Footer';
 import { Meta } from 'components/Meta';
 import { Intro } from 'layouts/Home/Intro';
@@ -11,18 +13,12 @@ import { Profile } from 'layouts/Home/Profile';
 import { ProjectSummary } from 'layouts/Home/ProjectSummary';
 import { useEffect, useRef, useState } from 'react';
 import styles from './Home.module.css';
-import gamestackTexture2Large from 'assets/gamestack-list-large.jpg';
 import gamestackTexture2Placeholder from 'assets/gamestack-list-placeholder.jpg';
-import gamestackTexture2 from 'assets/gamestack-list.jpg';
-import gamestackTextureLarge from 'assets/gamestack-login-large.jpg';
 import gamestackTexturePlaceholder from 'assets/gamestack-login-placeholder.jpg';
-import gamestackTexture from 'assets/gamestack-login.jpg';
 import sliceTextureLarge from 'assets/slice-app-large.jpg';
 import sliceTexturePlaceholder from 'assets/slice-app-placeholder.jpg';
 import sliceTexture from 'assets/slice-app.jpg';
-import sprTextureLarge from 'assets/spr-lesson-builder-dark-large.jpg';
 import sprTexturePlaceholder from 'assets/spr-lesson-builder-dark-placeholder.jpg';
-import sprTexture from 'assets/spr-lesson-builder-dark.jpg';
 
 const disciplines = ['Web dev.', 'Mobile dev.', 'UI & UX design'];
 
@@ -96,7 +92,7 @@ export const Home = () => {
         title="Pico Editor"
         description="Introducing our creative web application that empowers users to design stunning posters effortlessly. Whether you're planning an event, promoting a product, or simply unleashing your artistic flair, our user-friendly platform provides all the tools you need to create eye-catching posters that make a lasting impression."
         buttonText="View project"
-        buttonLink="/projects/slice"
+        buttonLink="https://pico-editor.vercel.app/"
         model={{
           type: 'laptop',
           alt: 'Annotating a biomedical image in the Slice app',
@@ -121,7 +117,7 @@ export const Home = () => {
     for all users.
     `}
         buttonText="View project"
-        buttonLink="/projects/smart-sparrow"
+        buttonLink="https://carnet-beta.vercel.app/"
         model={{
           type: 'laptop',
           alt: 'Carnet',
@@ -134,44 +130,16 @@ export const Home = () => {
         }}
       />{' '}
       <ProjectSummary
-        id="project-2"
-        alternate
-        sectionRef={projectTwo}
-        visible={visibleSections.includes(projectTwo.current)}
-        index={3}
-        title="EatOut"
-        description="Introducing the exceptional restaurant application that brings a delightful dining experience right to your fingertips. Discover, explore, and indulge in a world of culinary delights with our user-friendly and feature-rich platform."
-        buttonText="View website"
-        buttonLink="https://gamestack.hamishw.com"
-        model={{
-          type: 'phone',
-          alt: 'App login screen',
-          textures: [
-            {
-              srcSet: [eatout1],
-              placeholder: eatout1,
-            },
-            {
-              srcSet: [eatout2, eatout2],
-              placeholder: eatout2,
-            },
-          ],
-        }}
-      />{' '}
-      <ProjectSummary
         id="project-1"
         sectionRef={projectOne}
         visible={visibleSections.includes(projectOne.current)}
-        index={2}
-        title="Carnet"
+        index={3}
+        title="Eternum"
         description={`
-    Introducing an innovative web application
-    for car enthusiasts and sellers alike - a platform designed
-    for hosting car auctions and receiving bids.This user - friendly web app simplifies the process of selling and buying cars, providing a seamless experience
-    for all users.
+        Multilanguage DApp for versionning and virtuel contract between organisations
     `}
         buttonText="View project"
-        buttonLink="/projects/smart-sparrow"
+        buttonLink="https://eternum.vercel.app"
         model={{
           type: 'laptop',
           alt: 'Carnet',
@@ -187,17 +155,17 @@ export const Home = () => {
         id="project-1"
         sectionRef={projectOne}
         visible={visibleSections.includes(projectOne.current)}
-        index={1}
-        title="Designing the future of education"
-        description="Designing a platform to help educators build better online courseware"
+        index={4}
+        title="Aospresse"
+        description="Management system for a press agency"
         buttonText="View project"
-        buttonLink="/projects/smart-sparrow"
+        buttonLink="https://aospresse-admin.ma"
         model={{
           type: 'laptop',
           alt: 'Smart Sparrow lesson builder',
           textures: [
             {
-              srcSet: [sprTexture, sprTextureLarge],
+              srcSet: [aospresse, aospresse],
               placeholder: sprTexturePlaceholder,
             },
           ],
@@ -208,42 +176,22 @@ export const Home = () => {
         alternate
         sectionRef={projectTwo}
         visible={visibleSections.includes(projectTwo.current)}
-        index={2}
-        title="Video game progress tracking"
-        description="Design and development for a video game tracking app built in React Native"
+        index={5}
+        title="Bousta"
+        description="A mobile app for cooking enthusiasts to share their recipes and discover new ones"
         buttonText="View website"
-        buttonLink="https://gamestack.hamishw.com"
+        buttonLink="https://play.google.com/store/apps/details?id=com.bousta.naimdev"
         model={{
           type: 'phone',
           alt: 'App login screen',
           textures: [
             {
-              srcSet: [gamestackTexture, gamestackTextureLarge],
+              srcSet: [bousta1, bousta1],
               placeholder: gamestackTexturePlaceholder,
             },
             {
-              srcSet: [gamestackTexture2, gamestackTexture2Large],
+              srcSet: [bousta2, bousta2],
               placeholder: gamestackTexture2Placeholder,
-            },
-          ],
-        }}
-      />
-      <ProjectSummary
-        id="project-3"
-        sectionRef={projectThree}
-        visible={visibleSections.includes(projectThree.current)}
-        index={3}
-        title="Biomedical image collaboration"
-        description="Increasing the amount of collaboration in Slice, an app for biomedical imaging"
-        buttonText="View project"
-        buttonLink="/projects/slice"
-        model={{
-          type: 'laptop',
-          alt: 'Annotating a biomedical image in the Slice app',
-          textures: [
-            {
-              srcSet: [sliceTexture, sliceTextureLarge],
-              placeholder: sliceTexturePlaceholder,
             },
           ],
         }}
